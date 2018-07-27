@@ -15,4 +15,9 @@ class InventoryController {
     def remove() {
         render "You have one less than before."
     }
+
+    def list() {
+        def allProducts = Product.list()
+        [allProducts: allProducts]
+    }
 }
