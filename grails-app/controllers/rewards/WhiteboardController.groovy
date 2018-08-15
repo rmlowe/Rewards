@@ -23,5 +23,10 @@ class WhiteboardController {
         today = today + 1
         render("</br>New Date: " + today + "</br>")
     }
-
+    def strings() {
+        def first = "Mike"
+        def last = "Kelly"
+        def points = 4
+        render "Hey there $first. You already have $points points!"
+    }
 }
