@@ -1,6 +1,6 @@
 package rewards
 
-class Order {
+class OnlineOrder {
     Date orderDate
     Integer orderNumber
     Float orderTotal
