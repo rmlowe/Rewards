@@ -33,16 +33,16 @@ html * {
 }
 
 body {
-    background-color: #F5F5F5;
+    background-color: #E0D6CC;
     color: #333333;
     overflow-x: hidden; /* prevents box-shadow causing a horizontal scrollbar in firefox when viewport < 960px wide */
-    -moz-box-shadow: 0 0 0.3em #424649;
-    -webkit-box-shadow: 0 0 0.3em #424649;
-    box-shadow: 0 0 0.3em #424649;
+    -moz-box-shadow: 0 0 0.3em #754719;
+    -webkit-box-shadow: 0 0 0.3em #754719;
+    box-shadow: 0 0 0.3em #754719;
 }
 
 #grailsLogo {
-    background-color: #feb672;
+    background-color: #754719;
 }
 
 a:hover, a:active {
@@ -84,7 +84,7 @@ img {
 }
 
 .footer {
-    background: #424649;
+    background: #754719;
     color: #ffffff;
     clear: both;
     font-size: 0.8em;
@@ -94,7 +94,7 @@ img {
 }
 
 .footer a {
-    color: #feb672;
+    color: #754719;
 }
 
 .spinner {
@@ -174,7 +174,7 @@ img {
 }
 
 .nav li.dropdown.open ul.dropdown-menu {
-    background-color: #424649;
+    background-color: #754719;
 }
 
 /* CREATE/EDIT FORMS AND SHOW PAGES */
@@ -258,7 +258,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .required-indicator {
-    color: #cc0000;
+    color: #522900;
     display: inline-block;
     font-weight: bold;
     margin-left: 0.3em;
@@ -316,7 +316,7 @@ fieldset.embedded legend {
 .errors {
     background: #fff3f3;
     border: 1px solid #ffaaaa;
-    color: #cc0000;
+    color: #522900;
     -moz-box-shadow: 0 0 0.25em #ff8888;
     -webkit-box-shadow: 0 0 0.25em #ff8888;
     box-shadow: 0 0 0.25em #ff8888;
@@ -343,7 +343,7 @@ fieldset.embedded legend {
 .error input, .error select, .error textarea {
     background: #fff3f3;
     border-color: #ffaaaa;
-    color: #cc0000;
+    color: #522900;
 }
 
 .error input:focus, .error select:focus, .error textarea:focus {
@@ -357,7 +357,7 @@ fieldset.embedded legend {
 input:invalid, select:invalid, textarea:invalid {
     background: #fff3f3;
     border-color: #ffaaaa;
-    color: #cc0000;
+    color: #522900;
 }
 
 input:invalid:focus, select:invalid:focus, textarea:invalid:focus {
@@ -446,7 +446,7 @@ th.desc a {
 }
 
 th:hover, tr:hover {
-    background: #f5f5f5;
+    background: #E0D6CC;
 }
 
 /* PAGINATION */
