@@ -5,7 +5,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row"> <!-- Begin Nested Rows -->
         <div class="col-sm-5 col-sm-offset-1">
             <h4>Welcome back Mike.</h4>
             <p><h4>You have 3 points.</h4></p>
@@ -13,7 +13,7 @@
         <div class="col-sm-6">
             <g:textField name="phone" class="form-control" placeholder="Enter your cell number to check in" />
             <div class="row">
-                <h4></h4>
+                <h3></h3>
             </div>
             <div class="row">
                 <div class="col-sm-4">
@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="row">
-                <h4></h4>
+                <h3></h3>
             </div>
             <div class="row">
                 <div class="col-sm-4">
@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class="row">
-                <h4></h4>
+                <h3></h3>
             </div>
             <div class="row">
                 <div class="col-sm-4">
@@ -55,7 +55,7 @@
                 </div>
             </div>
             <div class="row">
-                <h4></h4>
+                <h3></h3>
             </div>
             <div class="row">
                 <div class="col-sm-4">
@@ -69,5 +69,5 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </div> <!-- End Nested Rows -->
+</div> <!-- End Container -->
