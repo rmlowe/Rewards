@@ -4,7 +4,7 @@ class CustomerController {
     static scaffold = Customer
 
     def lookup() {
-        def customerInstance = Customer.findByPhone(params.id)
+        def customerInstance = Customer.findAllByFirstNameIlikeAndTotalPointsGreaterThanEquals("B%", 3)
         [customerInstanceList: customerInstance]
     }
 
