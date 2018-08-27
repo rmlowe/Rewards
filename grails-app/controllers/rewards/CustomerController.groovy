@@ -4,7 +4,7 @@ class CustomerController {
     static scaffold = Customer
 
     def lookup() {
-        def customerInstance = Customer.list(sort: "lastName", order: "desc", max: 5, offset: 5)
+        def customerInstance = Customer.findByPhone(params.id)
         [customerInstanceList: customerInstance]
     }
 
