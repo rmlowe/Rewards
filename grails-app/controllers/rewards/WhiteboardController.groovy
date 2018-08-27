@@ -32,4 +32,17 @@ class WhiteboardController {
         def points = 4
         render "You live in ${state.toUpperCase()}."
     }
+
+    def conditions() {
+        def firstName = "Mike"
+        def totalPoints = 5
+        def welcomeMessage = ""
+        if (totalPoints >= 5) {
+            welcomeMessage = "Welcome back $firstName, this drink is on us."
+        } else if (totalPoints == 4) {
+            welcomeMessage = "Welcome back $firstName, your next drink is free."
+        } else
+            welcomeMessage = "Welcome back $firstName, you now have $totalPoints points."
+        render welcomeMessage
+    }
 }
