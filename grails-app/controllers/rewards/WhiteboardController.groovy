@@ -34,8 +34,8 @@ class WhiteboardController {
     }
 
     def conditions() {
-        def firstName = "Mike"
-        def totalPoints = 3
+        def firstName = params.first
+        def totalPoints = params.points.toInteger()
         def welcomeMessage = ""
 
         switch (totalPoints) {
