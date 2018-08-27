@@ -35,14 +35,24 @@ class WhiteboardController {
 
     def conditions() {
         def firstName = "Mike"
-        def totalPoints = 5
+        def totalPoints = 3
         def welcomeMessage = ""
-        if (totalPoints >= 5) {
-            welcomeMessage = "Welcome back $firstName, this drink is on us."
-        } else if (totalPoints == 4) {
-            welcomeMessage = "Welcome back $firstName, your next drink is free."
-        } else
-            welcomeMessage = "Welcome back $firstName, you now have $totalPoints points."
+
+        switch (totalPoints) {
+            case 5:
+                welcomeMessage = "Welcome back $firstName, this drink is on us."
+                break
+            case 4:
+                welcomeMessage = "Welcome back $firstName, your next drink is free."
+                break
+            case 2..3:
+                welcomeMessage = "Welcome back $firstName, you now have $totalPoints points."
+                break
+            default:
+                welcomeMessage = "Welcome $firstName. Thanks for registering."
+        }
+
         render welcomeMessage
     }
+
 }
