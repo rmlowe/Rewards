@@ -26,7 +26,10 @@ class WhiteboardController {
     def strings() {
         def first = "Mike"
         def last = "Kelly"
+        def fullName = "Mike Kelly"
+        def input = "SHOUTING"
+        def state = "ut"
         def points = 4
-        render "Hey there $first. You already have $points points!"
+        render "You live in ${state.toUpperCase()}."
     }
 }
