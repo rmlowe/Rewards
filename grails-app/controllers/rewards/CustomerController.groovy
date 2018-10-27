@@ -10,6 +10,22 @@ class CustomerController {
         [customerInstanceList: customerInstance]
     }
 
+    def customerLookup() {
+        // Query customer by phone #
+        // If no result,
+        //  Create a new customer
+        //  Create welcome message
+        //  Add award record
+        //  Save customer
+        //  Send welcome to kiosk
+        // If customer found,
+        //  Calculate total points
+        //  Create welcome message
+        //  Add award record
+        //  Save customer
+        //  Send welcome to kiosk
+    }
+
     def checkin() {}
 
     def index() {
