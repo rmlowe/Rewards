@@ -20,4 +20,15 @@ class CustomerController {
 //        [customerInstance: new Customer()]
         [customer: new Customer()]
     }
+
+    def save(Customer customerInstance) {
+        customerInstance.save()
+        redirect(action: "show", id: customerInstance.id)
+    }
+
+    def show(Long id) {
+        def customerInstance = Customer.get(id)
+//        [customerInstance: customerInstance]
+        [customer: customerInstance]
+    }
 }
