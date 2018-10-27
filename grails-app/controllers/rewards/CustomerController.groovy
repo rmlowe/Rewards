@@ -13,19 +13,6 @@ class CustomerController {
     def customerLookup(Customer lookupInstance) {
         def (customerInstance, welcomeMessage) = calculationsService.processCheckin(lookupInstance)
         render(view: "checkin", model:[customerInstance: customerInstance, welcomeMessage: welcomeMessage])
-        // Query customer by phone #
-        // If no result,
-        //  Create a new customer
-        //  Create welcome message
-        //  Add award record
-        //  Save customer
-        //  Send welcome to kiosk
-        // If customer found,
-        //  Calculate total points
-        //  Create welcome message
-        //  Add award record
-        //  Save customer
-        //  Send welcome to kiosk
     }
 
     def checkin() {}
@@ -71,4 +58,15 @@ class CustomerController {
         customerInstance.delete(flush:true)  // flush:true appears to be necessary, not sure why ...
         redirect(action:"index")
     }
+
+    def profile() {
+        def customerInstance = Customer.findByPhone(params.id)
+        [customerInstance: customerInstance]
+    }
+
+    def updateProfile(Customer customerInstance) {
+        customerInstance.save()
+        render(view: "profile", model:[customerInstance: customerInstance])
+    }
+
 }
