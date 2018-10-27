@@ -69,7 +69,7 @@
                     <input class="btn btn-primary btn-lg btn-block" type="button" name="pad" value="0" onclick="padkey(this.value)"/>
                 </div>
                 <div class="col-sm-4">
-                    <input class="btn btn-success btn-lg btn-block" type="button" name="pad" value="Go" />
+                    <g:submitButton class="btn btn-success btn-lg btn-block" name="pad" value="Go" />
                 </div>
             </div>
 
