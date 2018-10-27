@@ -31,4 +31,23 @@ class CustomerController {
 //        [customerInstance: customerInstance]
         [customer: customerInstance]
     }
+
+    def edit(Long id) {
+        def customerInstance = Customer.get(id)
+//        [customerInstance: customerInstance]
+        [customer: customerInstance]
+    }
+
+    def update(Long id) {
+        def customerInstance = Customer.get(id)
+        customerInstance.properties = params
+        customerInstance.save(flush:true)  // flush:true appears to be necessary, not sure why ...
+        redirect(action: "show", id: customerInstance.id)
+    }
+
+    def delete(Long id) {
+        def customerInstance = Customer.get(id)
+        customerInstance.delete(flush:true)  // flush:true appears to be necessary, not sure why ...
+        redirect(action:"index")
+    }
 }
