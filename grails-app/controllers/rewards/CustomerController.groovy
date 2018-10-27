@@ -3,6 +3,8 @@ package rewards
 class CustomerController {
     static scaffold = Customer
 
+    def calculationsService
+
     def lookup() {
         def customerInstance = Customer.findAllByFirstNameIlikeAndTotalPointsGreaterThanEquals("B%", 3)
         [customerInstanceList: customerInstance]
@@ -28,6 +30,7 @@ class CustomerController {
 
     def show(Long id) {
         def customerInstance = Customer.get(id)
+        customerInstance = calculationsService.getTotalPoints(customerInstance)
 //        [customerInstance: customerInstance]
         [customer: customerInstance]
     }

@@ -24,4 +24,13 @@ class CalculationsService {
                 welcomeMessage = "Welcome $firstName. Thanks for registering."
         }
     }
+
+    def getTotalPoints(customerInstance) {
+        def totalAwards = 0
+        customerInstance.awards.each{
+            totalAwards = totalAwards + it.points
+        }
+        customerInstance.totalPoints = totalAwards
+        return customerInstance
+    }
 }
