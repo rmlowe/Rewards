@@ -10,7 +10,9 @@ class CustomerController {
         [customerInstanceList: customerInstance]
     }
 
-    def customerLookup() {
+    def customerLookup(Customer lookupInstance) {
+        def (customerInstance, welcomeMessage) = calculationsService.processCheckin(lookupInstance)
+        render(view: "checkin", model:[customerInstance: customerInstance, welcomeMessage: welcomeMessage])
         // Query customer by phone #
         // If no result,
         //  Create a new customer
