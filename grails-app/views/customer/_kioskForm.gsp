@@ -63,7 +63,7 @@
             </div>
             <div class="row"> <!-- Fourth Button Row -->
                 <div class="col-sm-4">
-                    <input class="btn btn-danger btn-lg btn-block" type="button" name="pad" value="Del" />
+                    <g:link class="btn btn-danger btn-lg btn-block" action="checkin">Del</g:link>
                 </div>
                 <div class="col-sm-4">
                     <input class="btn btn-primary btn-lg btn-block" type="button" name="pad" value="0" onclick="padkey(this.value)"/>
